@@ -15,9 +15,19 @@
             <p class="subtitle">Welcome to the <strong>Carbon Footprint Tracker website</strong>!</p>
         </div>
     </header>
-    <section class="section">
+    <!-- <nav class="tabs is-boxed column is-2">
+        <div class="container">
+          <ul>
+            <li class="tab is-active"  name="WebDev" onclick="openTab(event,'WebAud')"><a >Electricity</a></li>
+            <li class="tab" name="WebAud" onclick="openTab(event,'WebDev')"><a >Vehicle and Travel</a></li>
+          </ul>
+        </div>
+    </nav> -->
+
+    <section class="section ">
         <div class="columns">
-            <form class="column is-2" id="carbonFootPrint">
+            <form class="column is-4" id="carbonFootPrint">
+                <label class="label">Electricity Consuption</label>
                 <div class="field">
                     <label class="label">Select a State</label>
                     <div class="control">
@@ -108,7 +118,37 @@
                 </div>
                 <div class="field is-grouped">
                     <div class="control">
-                        <button onclick=submitCarbonForm(event) class="button is-success">Submit</button>
+                        <button onclick=submitCarbonForm(event) class="button is-success">Next</button>
+                    </div>
+                    <div class="control">
+                        <button onclick=resetForm() class="button is-danger is-light">Reset</button>
+                    </div>
+                </div>
+            </form>
+
+            <form class="column is-4" id="clothingfootprint">
+                <label class="label">Clothing and Footwear Spendings</label>
+                <div class="field">
+                    <label class="label">Select Money Unit</label>
+                    <div class="control">
+                        <div class="select">
+                            <select name="moneyDropdown">
+                                <option>Choose an option</option>
+                                <option value="usd">Dollars</option>
+                            </select>
+                        </div>
+                    </div>
+                    </label>
+                </div>
+                <div class="field">
+                    <label class="label">Enter money Spent</label>
+                    <div class="control">
+                        <input class="input is-link" type="text" name="dollarAmount" placeholder="Money">
+                    </div>
+                </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button onclick=submitClothingForm(event) class="button is-success">Submit</button>
                     </div>
                     <div class="control">
                         <button onclick=resetForm() class="button is-danger is-light">Reset</button>
